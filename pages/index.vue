@@ -5,6 +5,7 @@
       <h1 class="title">
         line_api
       </h1>
+      <b-button variant="primary">たまプラーザ</b-button>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
