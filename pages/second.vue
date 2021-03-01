@@ -3,8 +3,8 @@
     <p class="my-4">second</p>
     <nuxt-link to="/">root</nuxt-link>
     <b-button @click="fetchOperations">fetchOperations</b-button>
-    <div>
-      {{ operation[0] }}
+    <div v-for="(operation, index) in operations" :key="index">
+      {{ operation }}
     </div>
   </div>
 </template>
@@ -13,7 +13,7 @@
 export default {
   data() {
     return {
-      operation: []
+      operations: []
     }
   },
   methods: {
@@ -23,7 +23,7 @@ export default {
         .then(response => {
           return response.json()
         }).then(data => {
-          this.operation = data
+          this.operations = data
         }).catch((err) => {
           console.log(err)
         });
