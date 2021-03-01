@@ -4,7 +4,7 @@
     <nuxt-link to="/">root</nuxt-link>
     <b-button @click="fetchOperations">fetchOperations</b-button>
     <div v-for="(operation, index) in operations" :key="index">
-      {{ operation }}
+      {{ operation['odpt:destinationStation'] }}<br><br>
     </div>
   </div>
 </template>
